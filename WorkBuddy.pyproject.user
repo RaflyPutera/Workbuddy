@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 12.0.0, 2023-11-26T20:26:04. -->
+<!-- Written by QtCreator 12.0.0, 2023-12-02T19:06:37. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -101,6 +101,7 @@
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Python.PysideBuildStep</value>
+      <value type="QString" key="Python.PySideProjectTool">C:\QTProjects\WorkBuddy\venv\Scripts\pyside6-project.exe</value>
      </valuemap>
      <value type="qlonglong" key="ProjectExplorer.BuildStepList.StepsCount">1</value>
      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Build</value>
@@ -148,7 +149,6 @@
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.C:/QTProjects/WorkBuddy/mainwindow.py</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/QTProjects/WorkBuddy/mainwindow.py</value>
     <value type="bool" key="ProjectExplorer.RunConfiguration.Customized">true</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{63d03b15-4740-4d72-9c78-6e87bf6084a2}</value>
     <value type="QString" key="PythonEditor.RunConfiguation.Script">C:\QTProjects\WorkBuddy\mainwindow.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
