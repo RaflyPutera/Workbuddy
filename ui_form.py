@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
-    QLabel, QMainWindow, QPushButton, QSizePolicy,
-    QStackedWidget, QVBoxLayout, QWidget)
+    QLabel, QMainWindow, QPlainTextEdit, QPushButton,
+    QSizePolicy, QStackedWidget, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -185,15 +185,17 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_3.addWidget(self.label, 0, Qt.AlignHCenter)
 
-        self.comboBox = QComboBox(self.frame)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setMinimumSize(QSize(30, 0))
-        self.comboBox.setFont(font4)
-        self.comboBox.setLayoutDirection(Qt.LeftToRight)
-        self.comboBox.setStyleSheet(u"QComboBox{\n"
+        self.tr_to = QComboBox(self.frame)
+        self.tr_to.addItem("")
+        self.tr_to.addItem("")
+        self.tr_to.addItem("")
+        self.tr_to.addItem("")
+        self.tr_to.addItem("")
+        self.tr_to.setObjectName(u"tr_to")
+        self.tr_to.setMinimumSize(QSize(30, 0))
+        self.tr_to.setFont(font4)
+        self.tr_to.setLayoutDirection(Qt.LeftToRight)
+        self.tr_to.setStyleSheet(u"QComboBox{\n"
 "	background-color:transparent;\n"
 "	color:rgb(90, 84, 84);\n"
 "}\n"
@@ -202,20 +204,81 @@ class Ui_MainWindow(object):
 "	background-color:rgb(221, 215, 215);\n"
 "	color:rgb(90, 84, 84);\n"
 "}")
-        self.comboBox.setEditable(False)
-        self.comboBox.setFrame(False)
+        self.tr_to.setEditable(False)
+        self.tr_to.setFrame(False)
 
-        self.horizontalLayout_3.addWidget(self.comboBox, 0, Qt.AlignRight)
+        self.horizontalLayout_3.addWidget(self.tr_to, 0, Qt.AlignRight)
 
 
         self.verticalLayout_8.addWidget(self.frame, 0, Qt.AlignHCenter|Qt.AlignTop)
 
         self.frame_3 = QFrame(self.f_translator)
         self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setMinimumSize(QSize(0, 0))
+        self.frame_3.setMaximumSize(QSize(16777215, 300))
         self.frame_3.setFrameShape(QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_10 = QVBoxLayout(self.frame_3)
+        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
+        self.tr_input = QPlainTextEdit(self.frame_3)
+        self.tr_input.setObjectName(u"tr_input")
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.tr_input.sizePolicy().hasHeightForWidth())
+        self.tr_input.setSizePolicy(sizePolicy)
+        self.tr_input.setFont(font4)
+        self.tr_input.setStyleSheet(u"background-color: rgb(241, 234, 234);\n"
+"border: 1px solid;\n"
+"border-radius:10px;\n"
+"border-color: transparent;\n"
+"color:rgb(53, 48, 48)")
 
-        self.verticalLayout_8.addWidget(self.frame_3)
+        self.verticalLayout_10.addWidget(self.tr_input)
+
+        self.tr_output = QPlainTextEdit(self.frame_3)
+        self.tr_output.setObjectName(u"tr_output")
+        sizePolicy.setHeightForWidth(self.tr_output.sizePolicy().hasHeightForWidth())
+        self.tr_output.setSizePolicy(sizePolicy)
+        self.tr_output.setFont(font4)
+        self.tr_output.setStyleSheet(u"background-color: rgb(241, 234, 234);\n"
+"border: 1px solid;\n"
+"border-radius:10px;\n"
+"border-color: transparent;\n"
+"color:rgb(53, 48, 48)")
+
+        self.verticalLayout_10.addWidget(self.tr_output)
+
+
+        self.verticalLayout_8.addWidget(self.frame_3, 0, Qt.AlignVCenter)
+
+        self.frame_4 = QFrame(self.f_translator)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_11 = QVBoxLayout(self.frame_4)
+        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
+        self.translate = QPushButton(self.frame_4)
+        self.translate.setObjectName(u"translate")
+        self.translate.setMinimumSize(QSize(160, 40))
+        self.translate.setMaximumSize(QSize(300, 16777215))
+        self.translate.setFont(font4)
+        self.translate.setCursor(QCursor(Qt.PointingHandCursor))
+        self.translate.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(124, 118, 118);\n"
+"	border: 1px solid;\n"
+"	border-radius: 10px;\n"
+"	border-color:transparent;\n"
+"	color:rgb(241, 234, 234)\n"
+"}\n"
+"QPushButton::hover{\n"
+"	background-color: rgb(49, 44, 44);\n"
+"}")
+
+        self.verticalLayout_11.addWidget(self.translate, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_8.addWidget(self.frame_4)
 
         self.functionStack.addWidget(self.f_translator)
         self.f_notes = QWidget()
@@ -324,14 +387,17 @@ class Ui_MainWindow(object):
         self.header.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Welcome back.", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Translate to:", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"English", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Korean", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Indonesian", None))
+        self.tr_to.setItemText(0, QCoreApplication.translate("MainWindow", u"English", None))
+        self.tr_to.setItemText(1, QCoreApplication.translate("MainWindow", u"Korean", None))
+        self.tr_to.setItemText(2, QCoreApplication.translate("MainWindow", u"Indonesian", None))
+        self.tr_to.setItemText(3, QCoreApplication.translate("MainWindow", u"Japanese", None))
+        self.tr_to.setItemText(4, QCoreApplication.translate("MainWindow", u"Chinese", None))
 
 #if QT_CONFIG(tooltip)
-        self.comboBox.setToolTip("")
+        self.tr_to.setToolTip("")
 #endif // QT_CONFIG(tooltip)
-        self.comboBox.setPlaceholderText("")
+        self.tr_to.setPlaceholderText("")
+        self.translate.setText(QCoreApplication.translate("MainWindow", u"Translate", None))
         self.calculatorbtn.setText("")
         self.notesbtn.setText("")
         self.translatebtn.setText("")

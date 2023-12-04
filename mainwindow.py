@@ -4,14 +4,11 @@ import sys
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QApplication, QMainWindow, QStyledItemDelegate
 from ui_form import Ui_MainWindow
-# from PySide6.QtCore import Signal
-# from PySide6.QtGui import QPixmap
-
 from PySide6 import QtGui, QtCore
 
 #user-defined-imports
 from ui_transitions import transitions, routings
-
+from modules.translator_mod import translator
 
 class MainWindow(QMainWindow):
     ui_transition_signals=QtCore.Signal(int)
@@ -44,6 +41,10 @@ class MainWindow(QMainWindow):
 
     ##main button routing
         self.ui.translatebtn.clicked.connect(lambda:routings.route_to(self,1))
+
+    ##sub buttons routing
+        #connect translate button
+        self.ui.translate.clicked.connect(lambda:translator.translate(self))
 
         
 if __name__ == "__main__":

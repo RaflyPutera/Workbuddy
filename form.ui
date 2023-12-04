@@ -387,7 +387,7 @@ border-color:transparent;</string>
                          </widget>
                         </item>
                         <item alignment="Qt::AlignRight">
-                         <widget class="QComboBox" name="comboBox">
+                         <widget class="QComboBox" name="tr_to">
                           <property name="minimumSize">
                            <size>
                             <width>30</width>
@@ -441,19 +441,141 @@ QComboBox QAbstractItemView::item {
                             <string>Indonesian</string>
                            </property>
                           </item>
+                          <item>
+                           <property name="text">
+                            <string>Japanese</string>
+                           </property>
+                          </item>
+                          <item>
+                           <property name="text">
+                            <string>Chinese</string>
+                           </property>
+                          </item>
                          </widget>
                         </item>
                        </layout>
                       </widget>
                      </item>
-                     <item>
+                     <item alignment="Qt::AlignVCenter">
                       <widget class="QFrame" name="frame_3">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>300</height>
+                        </size>
+                       </property>
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
                        </property>
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_10">
+                        <item>
+                         <widget class="QPlainTextEdit" name="tr_input">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Source Code Pro</family>
+                            <pointsize>11</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">background-color: rgb(241, 234, 234);
+border: 1px solid;
+border-radius:10px;
+border-color: transparent;
+color:rgb(53, 48, 48)</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPlainTextEdit" name="tr_output">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Source Code Pro</family>
+                            <pointsize>11</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">background-color: rgb(241, 234, 234);
+border: 1px solid;
+border-radius:10px;
+border-color: transparent;
+color:rgb(53, 48, 48)</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_4">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_11">
+                        <item alignment="Qt::AlignHCenter">
+                         <widget class="QPushButton" name="translate">
+                          <property name="minimumSize">
+                           <size>
+                            <width>160</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>300</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Source Code Pro</family>
+                            <pointsize>11</pointsize>
+                           </font>
+                          </property>
+                          <property name="cursor">
+                           <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QPushButton{
+	background-color: rgb(124, 118, 118);
+	border: 1px solid;
+	border-radius: 10px;
+	border-color:transparent;
+	color:rgb(241, 234, 234)
+}
+QPushButton::hover{
+	background-color: rgb(49, 44, 44);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Translate</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </widget>
                      </item>
                     </layout>
